@@ -1,0 +1,100 @@
+body, html {
+@include fluid-text;
+color: #000000;
+background-color: var(--white-color);
+font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+
+}
+// ------- стили утилитарных классов
+// утилитарные классы: 
+.visually-hidden {
+    @include visually-hidden;
+}
+.button-main {
+    @include button-main;
+}
+
+// ------- sidebar styles
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var(--accent--blue);
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+  @include mobile {
+    padding-top: 15px;
+  }
+}
+.sidenav--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: inherit;
+  color: var(--white-color);
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  @include mobile {
+    padding: 5px 5px 5px 16px;
+  }
+  
+}
+
+.burger-link {
+  text-decoration: none;
+  color: var(--light-green-color);
+  @include hover {
+    color: #000000;
+  }
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: var(--light-green-color);
+}
+#burger {
+  color: var(--light-green-color)!important;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+}
+.logo-mobile {
+  position: absolute;
+  top:0;
+  left: 0;
+  display: block;
+  margin: 0.5rem;
+}
+.logo-desktop {
+  transform: none;
+  transition: transform 03s all ease-in;
+  @include hover {
+    transform: scale(1.2);
+  }
+}
+.center {
+  margin: 0 auto;
+  display: block;
+  margin-top: 32px !important;
+}
+

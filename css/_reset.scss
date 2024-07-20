@@ -1,0 +1,169 @@
+
+/* Обнуление стилей */
+
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+ 
+   &:before,
+   &:after {
+     box-sizing: border-box;
+   }
+ }
+ 
+ :focus,
+ :active {
+   outline: none;
+ }
+ 
+ a {
+text-decoration: inherit; 
+ 
+   &:focus,
+   &:active {
+     outline: none;
+   }
+ }
+ 
+  footer  {
+   display: block;
+ }
+ 
+ img {
+   vertical-align: top;
+   max-width: 100%;
+ }
+ 
+ /* Типографика */
+ 
+ html, body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+   font-size: inherit;
+   font-weight: 400;
+ }
+ 
+ p {
+   margin-block: 0;
+   --paragraphMarginBottom: 24px;
+ 
+   &:where(:not([class]):not(:last-child)) {
+     margin-bottom: var(--paragraphMarginBottom);
+   }
+ }
+ 
+ /* Формы */
+ 
+ input, button, textarea {
+   font-family: inherit;
+ 
+   &:clear {
+     display: none;
+   }
+ }
+ 
+ button {
+   cursor: pointer;
+ 
+   &:focus-inner {
+     padding: 0;
+     border: 0;
+   }
+ }
+ 
+ /* Списки */
+ 
+ ul, ol {
+   padding-left: 0;
+ }
+ 
+ ul[class] {
+   list-style: none;
+ }
+ 
+ /* Дополнительные стили */
+ 
+ body,
+ blockquote,
+ figure:where([class]) {
+   margin: 0;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ ul,
+ ol,
+ dl:where([class]) {
+   margin-block: 0;
+ }
+ 
+ dd[class] {
+   margin-left: 0;
+ }
+ 
+ fieldset[class] {
+   margin-left: 0;
+   padding: 0;
+   border: none;
+ }
+ 
+ img {
+  
+   max-width: 100%;
+ }
+ 
+ input,
+ textarea,
+ select,
+ button {
+   font: inherit;
+ }
+ button {
+  all: initial;
+ }
+ html {
+   height: 100%;
+  
+ }
+ 
+ body {
+   min-height: 100%;
+   line-height: 1.5;
+ }
+ 
+ svg *[fill] {
+   fill: currentColor;
+ }
+ 
+ svg *[stroke] {
+   stroke: currentColor;
+ }
+ 
+ svg * {
+   transition-property: fill, stroke;
+ }
+ 
+ @media (prefers-reduced-motion: reduce) {
+   * {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+   }
+ }

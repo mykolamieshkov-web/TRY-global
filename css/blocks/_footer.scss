@@ -1,0 +1,29 @@
+.footer {
+  @include responsive-block;
+  height: fit-content;
+  margin-top: 32px;
+  padding: 15px;
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    a{
+        padding: 3px 2px;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+       
+        }
+    }
+    img {
+        margin-left: auto;
+        margin-left: auto;
+        display: block;
+        border: none;
+        transition: 3ms border all ease-in-out;
+        @include hover {
+            border: 2px solid var(--accent--blue);
+    }
+  }  
+}
